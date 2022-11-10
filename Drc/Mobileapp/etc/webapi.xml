@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    
+    <!-- Customer Create -->
+    <route url="/V1/customercreate" method="POST">
+        <service class="Drc\Mobileapp\Api\AccountManagementInterface" method="createAccount"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Social Login -->
+    <route url="/V1/fetch/sociallogin" method="POST">
+        <service class="Drc\Mobileapp\Api\SocialLoginCustomerInterface" method="socialLogin"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+        
+    <!-- Category Product List -->
+    <route url="/V1/category/products/" method="POST">
+        <service class="Drc\Mobileapp\Api\Category\Products\WebApiProductsInterface" method="getCategoryProducts"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    
+    <!-- Produt Details -->
+    <route url="/V1/product/" method="POST">
+        <service class="Drc\Mobileapp\Api\Product\WebApiProductInterface" method="getDetails"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Customer Details By Id -->
+    <route url="/V1/customerdetails" method="POST">
+        <service class="Drc\Mobileapp\Api\Customer\WebApiCustomerInterface" method="getCustomerDetails"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    
+    <!-- HomePage API after merge -->
+    <route url="/V1/homepage" method="POST">
+        <service class="Drc\Mobileapp\Api\Homepage\WebApiHomepageInterface" method="getHomepageMergerFunction"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    
+    <!-- Sidebar bottom menu -->
+    <route url="/V1/bottommenu" method="POST">
+        <service class="Drc\Mobileapp\Api\Homepage\WebApiBottomMenuInterface" method="getHomepageBottomMenu"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Category filter -->
+    <route url="/V1/category/filter/V1/:category_id" method="POST">
+        <service class="Drc\Mobileapp\Api\Category\WebApiCategoryInterface" method="getCategoryFilterNewVersion"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Shop Under Product -->
+    <route url="/V1/category/shopunder/V1/:category_id" method="POST">
+        <service class="Drc\Mobileapp\Api\Category\WebApiCategoryInterface" method="getShopUnderProduct"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    
+    <!-- Related Product API -->
+    <route url="/V1/relatedproduct/" method="POST">
+        <service class="Drc\Mobileapp\Api\Product\WebApiProductInterface" method="getRelatedProducts"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    
+    <!-- Category List -->
+	<route url="/V1/allcategories" method="GET">
+        <service class="Drc\Mobileapp\Api\Category\WebApiCategoryInterface" method="getAllcategories"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+	
+	 <!-- Add New address for customer API -->
+    <route url="/V1/addnewaddress" method="POST">
+        <service class="Drc\Mobileapp\Api\Customer\WebApiAddressInterface" method="saveAddress"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+	
+	<!-- Get address list for customer API -->
+    <route url="/V1/getaddresses" method="POST">
+        <service class="Drc\Mobileapp\Api\Customer\WebApiAddressInterface" method="getCustomerAddress"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+
+    <!-- Update address by id -->
+    <route url="/V1/address/createUpdate" method="POST">
+    <service class="Drc\Mobileapp\Api\Customer\CustomAddressInterface" method="addressUpdate"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+
+    <!-- get quote id, total from customer id -->
+    <route url="/V1/quotetotalqty" method="POST">
+        <service class="Drc\Mobileapp\Api\Customer\WebApiQuoteQtyInterface" method="getQuoteQty"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+
+    <!-- get order details by customer id -->
+    <route url="/V1/sales-orders/:customer_id" method="GET">
+        <service class="Drc\Mobileapp\Api\Customer\WebApiOrderInterface" method="getOrderList"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+    </route>
+
+
+    <!-- New customer token --> 
+    <route url="/V1/integration/customer/customtoken" method="POST">
+        <service class="Drc\Mobileapp\Api\CustomerTokenServiceInterface" method="createCustomerAccessToken"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+   
+   <!-- Customer logout -->
+    <route url="/V1/customer/customlogout" method="POST">
+        <service class="Drc\Mobileapp\Api\CustomerTokenServiceInterface" method="revokeCustomerAccessToken"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Customer Token Update -->
+    <route url="/V1/customer/customUpdateToken" method="POST">
+        <service class="Drc\Mobileapp\Api\UpdateTokenInterface" method="UpdateDeviceToken"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Customer Notification -->
+    <route url="/V1/customer/customListNofication" method="POST">
+        <service class="Drc\Mobileapp\Api\ListNotificationInterface" method="UpdatePushnotification"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Currency change  -->
+    <route url="/V1/currency/change" method="POST">
+        <service class="Drc\Mobileapp\Api\Currency\WebApiCurrencyInterface" method="change"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Current currency  -->
+    <route url="/V1/currency/current" method="GET">
+        <service class="Drc\Mobileapp\Api\Currency\WebApiCurrencyInterface" method="get"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Currency List -->
+    <route url="/V1/currency/list" method="GET">
+        <service class="Drc\Mobileapp\Api\Currency\WebApiCurrencyInterface" method="getCurrencyList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Get all Brand -->
+    <route url="/V1/brand/all" method="GET">
+        <service class="Drc\Mobileapp\Api\Brand\WebApiBrandInterface" method="getAllBrand"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Brand filter with product -->
+    <route url="/V1/brand/products" method="POST">
+        <service class="Drc\Mobileapp\Api\Brand\WebApiBrandInterface" method="getProductsByBrand"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Brand filter with Category -->
+    <route url="/V1/brand/category" method="POST">
+        <service class="Drc\Mobileapp\Api\Brand\WebApiBrandInterface" method="getCategoryBrand"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Mobile Login OTP -->
+    <route url="/V1/login_mobile_otp" method="POST">
+        <service class="Drc\Mobileapp\Api\WebApiMobileLoginOtpInterface" method="sendMobileLoginOtp"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route> 
+
+    <!-- Mobile Verify OTP -->
+    <route url="/V1/verify_mobile_otp" method="POST">
+        <service class="Drc\Mobileapp\Api\WebApiMobileVerifyOtpInterface" method="mobileVerifyOtp"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route> 
+
+    <!-- Promo Banner -->
+    <route url="/V1/promobanner/V1/:banner_position" method="GET">
+        <service class="Drc\Mobileapp\Api\PromoBanner\WebApiPromoaBannerInterface" method="getPromoBanner"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>  
+
+    <!-- Promo Banner Position -->
+    <route url="/V1/promobanner/position" method="GET">
+        <service class="Drc\Mobileapp\Api\PromoBanner\WebApiPromoaBannerInterface" method="getPromoBannerPosition"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route> 
+
+    <!-- Tracking Order Info -->
+    <route url="/V1/trackinginfo" method="POST">
+        <service class="Drc\Mobileapp\Api\TrackOrder\WebApiTrackOrderInterface" method="getTrackOrderDetails"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route> 
+
+    <route url="/V1/ismobilenumberloyality" method="POST">
+        <service class="Drc\Mobileapp\Api\WebApiIsMobileNumberVerified" method="isMobileLoyality"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/redeemVoucher" method="POST">
+        <service class="Drc\Mobileapp\Api\Loyalty\LoyaltyVoucher" method="redeemVoucher"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/getActiveVouchers" method="POST">
+        <service class="Drc\Mobileapp\Api\Loyalty\LoyaltyVoucher" method="getActiveVouchers"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/applyGiftcardAccount" method="PUT">
+        <service class="Drc\Mobileapp\Api\Loyalty\ApplyGiftcardAccount" method="applyGiftCardToCart"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+
+    <route url="/V1/removeGiftcardAccount" method="PUT">
+        <service class="Drc\Mobileapp\Api\Loyalty\ApplyGiftcardAccount" method="removeGiftCardFromCart"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+
+    <route url="/V1/updateOfflineUsedVouchers" method="POST">
+        <service class="Drc\Mobileapp\Api\Loyalty\LoyaltyVoucher" method="updateOfflineUsedVouchers"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/updateUsedVouhcer" method="POST">
+        <service class="Drc\Mobileapp\Api\Loyalty\LoyaltyVoucher" method="updateUsedVouhcer"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+
+    <!-- Brand filter with Category -->
+    <route url="/V1/force-update/systemconfig/" method="POST">
+        <service class="Drc\Mobileapp\Api\Forceupdate\SystemconfigManagementInterface" method="getForceUpdateConfiguration"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+        
+</routes>

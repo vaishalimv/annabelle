@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mobileapp" translate="label" sortOrder="70">
+            <label>Mobile App</label>
+        </tab>
+        <section id="homepagebanner" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Home Page settings</label>
+            <tab>mobileapp</tab>
+            <resource>Drc_Mobileapp::homepagebanner_config</resource>
+            <group id="general_1" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Offer Banner</label>                
+                <field id="category_id_1" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Category</label>
+                    <source_model>Drc\Mobileapp\Model\Config\Source\Category</source_model>
+                    <comment>Enter Category Id for you want redirect banner offer</comment>
+                </field>
+                <field id="category_image_id_1" translate="label comment" type="image" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Banner</label>
+                    <backend_model>Drc\Mobileapp\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">mobile_banner</base_url>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+
+            <group id="general_2" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Collection Banner</label>                
+                <field id="category_id_2" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Category</label>
+                    <source_model>Drc\Mobileapp\Model\Config\Source\Category</source_model>
+                    <comment>Enter Category Id for you want redirect banner offer</comment>
+                </field>
+                <field id="category_image_id_2" translate="label comment" type="image" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Banner</label>
+                    <backend_model>Drc\Mobileapp\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">mobile_banner</base_url>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+
+            <group id="general_3" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Sale Banner</label>                
+                 <field id="category_id_3" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Category</label>
+                    <source_model>Drc\Mobileapp\Model\Config\Source\Category</source_model>
+                    <comment>Enter Category Id for you want redirect banner offer</comment>
+                </field>
+                <field id="category_image_id_3" translate="label comment" type="image" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Banner</label>
+                    <backend_model>Drc\Mobileapp\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">mobile_banner</base_url>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+
+            <group id="home_best_seller" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Home Page Best Seller</label> 
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="best_seller_category_id" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Category</label>
+                    <source_model>Drc\Mobileapp\Model\Config\Source\Category</source_model>
+                    <comment>Select Category for See All Category</comment>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+
+            <group id="home_shop_under" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Home Page Shop Under</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>                
+                <field id="sort_order" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+
+            <group id="home_see_more_category" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Home Page See More Category</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>                
+                <field id="see_more_category_id" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Category</label>
+                    <source_model>Drc\Mobileapp\Model\Config\Source\Category</source_model>
+                    <comment>The sub category will be shown according to the category</comment>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+
+            <group id="home_mummy_me" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Home Page Mummy and me Category</label>  
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>              
+                <field id="mummy_me_category_id" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Category</label>
+                    <source_model>Drc\Mobileapp\Model\Config\Source\Category</source_model>
+                    <comment>The product will be shown according to the category</comment>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+
+            <group id="home_shop_by_brand" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Home Page Shop By Brand</label>          
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>      
+                <field id="sort_order" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+
+            <group id="home_plus_size" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Home Page Plus Size Category</label>                
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="plus_size_category_id" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Category</label>
+                    <source_model>Drc\Mobileapp\Model\Config\Source\Category</source_model>
+                    <comment>The product will be shown according to the category</comment>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+
+            <group id="home_trending" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Home Page Trending Category</label>                
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="trending_category_id" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Category</label>
+                    <source_model>Drc\Mobileapp\Model\Config\Source\Category</source_model>
+                    <comment>The product will be shown according to the category</comment>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+
+            <group id="service_block_slider_1" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Service Block Slider - 1</label>  
+                <field id="sort_order" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Common Sort Order</label>
+                </field>
+                <field id="service_title" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="service_desc" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Description</label>
+                </field>
+                <field id="service_icon" translate="label comment" type="image" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Icon</label>
+                    <backend_model>Drc\Mobileapp\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">mobile_banner</base_url>
+                </field>
+            </group>
+
+            <group id="service_block_slider_2" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Service Block Slider - 2</label>  
+                <field id="service_title" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="service_desc" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Description</label>
+                </field>
+                <field id="service_icon" translate="label comment" type="image" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Icon</label>
+                    <backend_model>Drc\Mobileapp\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">mobile_banner</base_url>
+                </field>
+            </group>
+
+            <group id="service_block_slider_3" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Service Block Slider - 3</label>  
+                <field id="service_title" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="service_desc" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Description</label>
+                </field>
+                <field id="service_icon" translate="label comment" type="image" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Icon</label>
+                    <backend_model>Drc\Mobileapp\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">mobile_banner</base_url>
+                </field>
+            </group>
+
+            <group id="service_block_slider_4" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Service Block Slider - 4</label>  
+                <field id="service_title" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="service_desc" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Description</label>
+                </field>
+                <field id="service_icon" translate="label comment" type="image" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Icon</label>
+                    <backend_model>Drc\Mobileapp\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">mobile_banner</base_url>
+                </field>
+            </group>
+        </section>
+
+        <!-- Customer sidebar Dashboard -->
+        <section id="sidebardashboard" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Sidebar BottomMenu</label>
+            <tab>mobileapp</tab>
+            <resource>Drc_Mobileapp::sidebardashboard_config</resource>
+            <group id="store_general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Need Assistance</label>                
+                <field id="whatsapp_number" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Whatsapp Number</label>
+                </field>
+                <field id="email" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email</label>
+                </field>
+            </group>
+        </section>
+
+        <!-- Sale category -->
+        <section id="salecategory" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Sale Category</label>
+            <tab>mobileapp</tab>
+            <resource>Drc_Mobileapp::salecategory_config</resource>
+            <group id="women_sale" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Women Sale Category</label>                
+                <field id="women_sale_category_id" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Category</label>
+                    <source_model>Drc\Mobileapp\Model\Config\Source\Category</source_model>
+                    <comment>The product will be shown according to the category</comment>
+                </field>
+                <field id="image" translate="label comment" type="image" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image</label>
+                    <backend_model>Drc\Mobileapp\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">mobile_banner</base_url>
+                </field>
+            </group>
+            <group id="girls_sale" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Girls Sale Category</label>                
+                <field id="girls_sale_category_id" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Category</label>
+                    <source_model>Drc\Mobileapp\Model\Config\Source\Category</source_model>
+                    <comment>The product will be shown according to the category</comment>
+                </field>
+                <field id="image" translate="label comment" type="image" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image</label>
+                    <backend_model>Drc\Mobileapp\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">mobile_banner</base_url>
+                </field>
+            </group>
+            <group id="boys_sale" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Boys Sale Category</label>                
+                <field id="boys_sale_category_id" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Category</label>
+                    <source_model>Drc\Mobileapp\Model\Config\Source\Category</source_model>
+                    <comment>The product will be shown according to the category</comment>
+                </field>
+                <field id="image" translate="label comment" type="image" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image</label>
+                    <backend_model>Drc\Mobileapp\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">mobile_banner</base_url>
+                </field>
+            </group>
+            <group id="mummyme_sale" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Mummy Me Sale Category</label>                
+                <field id="mummyme_sale_category_id" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Sale Category</label>
+                    <source_model>Drc\Mobileapp\Model\Config\Source\Category</source_model>
+                    <comment>The product will be shown according to the category</comment>
+                </field>
+                <field id="image" translate="label comment" type="image" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image</label>
+                    <backend_model>Drc\Mobileapp\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">mobile_banner</base_url>
+                </field>
+            </group>
+        </section>
+
+        <!-- Force Update -->
+        <section id="forceupdate" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Force Update Configuration</label>
+            <tab>mobileapp</tab>
+            <resource>Drc_Mobileapp::forceupdate_config</resource>
+            <group id="force_update" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Force Upodate Config</label>    
+                <field id="force_update_title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>            
+                <field id="force_update_body" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Body</label>
+                </field>
+                <field id="force_update_android_version" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Latest Android Version</label>
+                </field> 
+                <field id="force_update_google_playstore_link" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Google Playstore link</label>
+                </field>
+                <field id="force_update_ios_version" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Latest Ios Version</label>
+                </field>  
+                <field id="force_update_ios_playstore_link" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Ios Appstore link</label>
+                </field>
+                <field id="is_force_update" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Is Force Update</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>  
+            </group>
+        </section>
+    </system>
+</config>

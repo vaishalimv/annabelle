@@ -1,0 +1,8 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+   	<event name="sales_quote_load_after">
+       <observer name="drc_image_cart_observer" instance="Drc\Mobileapp\Observer\Cart\SalesQuoteLoadAfter" />
+  	</event>
+  	<event name="sales_order_load_after">
+    	<observer name="sales_order_load_order_attribute" instance="Drc\Mobileapp\Observer\Sales\OrderLoadAfter" />
+	</event>
+</config>

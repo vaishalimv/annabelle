@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Drc_Pushnotification::parent" title="Push Notification" module="Drc_Pushnotification" sortOrder="50" resource="Drc_Pushnotification::parent"/>
+		<add id="Drc_Pushnotification::pushnotification" title="Device Push Notification" module="Drc_Pushnotification" sortOrder="10" parent="Drc_Pushnotification::parent" action="pushnotification/pushnotification" resource="Drc_Pushnotification::pushnotification"/>
+    </menu>
+</config>

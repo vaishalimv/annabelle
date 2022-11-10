@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Drc Systems India Pvt Ltd.
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <tab id="drc" translate="label" sortOrder="99999">
+            <label>DRC EXTENSIONS</label>
+        </tab>
+        <section id="pushnotification" translate="label" type="text" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Push Notification</label>
+            <!-- Assign section to tab -->
+            <tab>drc</tab>
+            <resource>Drc_Pushnotification::configuration</resource>
+            <!-- create group for fields in section -->
+            <group id="subcribe_newsletter" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Push Notification Settings</label>
+                <field id="push_server_key" translate="label comment" sortOrder="1" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Server Key</label>                   
+                </field>                
+            </group>            
+        </section>
+    </system>
+</config>

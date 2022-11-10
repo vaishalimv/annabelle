@@ -1,0 +1,17 @@
+<?php
+$objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
+$bannerColls    = $objectManager -> create('\Drc\Pushnotification\Model\ResourceModel\Pushnotification\Collection');
+$storeManager   = $objectManager->get('\Magento\Store\Model\StoreManagerInterface');
+$storeId        = $storeManager->getStore()->getStoreId(); 
+$bannerColls->addFieldToFilter('status', 0);
+$bannerColls->addFieldToFilter('store_ids', $storeId);
+$bannerColls->setOrder('sort_order','ASC');
+
+$mediaUrl = $objectManager->get('Magento\Store\Model\StoreManagerInterface')->getStore()
+						   ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
+<?php foreach($bannerColls as $bannerData):?>
+	<div class="img-wrapper">
+		<a href="<?php echo $bannerData->getUrl();?>"><img src="<?php echo $mediaUrl.$bannerData['image'];?>" alt="" /></a>
+	</div>
+<?php endforeach?>	

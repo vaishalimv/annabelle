@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Drc\Pushnotification\Block\Adminhtml\Pushnotification" name="pushnotification_pushnotification_listing"/>
+        </referenceContainer>
+        <referenceContainer name="admin.pushnotification.pushnotification.grid"></referenceContainer>
+    </body>
+    <head>
+        <link src="Drc_Pushnotification::js/customjs.js"/>
+    </head>
+</page>

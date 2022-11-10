@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+ 
+    <preference for="Drc\Mobileapp\Api\AccountManagementInterface" type="Drc\Mobileapp\Model\AccountManagement" />
+
+    <!-- Category List -->
+    <preference for="Drc\Mobileapp\Api\Category\Products\WebApiProductsInterface" type="Drc\Mobileapp\Model\Category\Products\WebApiProducts" />
+    
+    <!-- For Product Detail -->
+    <preference for="Drc\Mobileapp\Api\Product\WebApiProductInterface" type="Drc\Mobileapp\Model\Product\WebApiProduct" />
+	
+    <!-- For Category -->
+	<preference for="Drc\Mobileapp\Api\Category\WebApiCategoryInterface" type="Drc\Mobileapp\Model\Category\WebApiCategory" />
+
+    <!-- Customer Details -->
+    <preference for="Drc\Mobileapp\Api\Customer\WebApiCustomerInterface" type="Drc\Mobileapp\Model\Customer\CustomerDetails" />
+    
+    <!-- Homepage -->
+	<preference for="Drc\Mobileapp\Api\Homepage\WebApiHomepageInterface" type="Drc\Mobileapp\Model\Homepage\WebApiHomepage" />	
+	
+    <!-- Side bar Menu -->
+    <preference for="Drc\Mobileapp\Api\Homepage\WebApiBottomMenuInterface" type="Drc\Mobileapp\Model\Homepage\WebApiBottomMenu" />  
+    
+    <!-- Customer Save Address -->
+	<preference for="Drc\Mobileapp\Api\Customer\WebApiAddressInterface" type="Drc\Mobileapp\Model\Customer\SaveCustomerAddress" />
+
+    <!-- Customer Address -->
+    <preference for="Drc\Mobileapp\Api\Customer\CustomAddressInterface" type="Drc\Mobileapp\Model\Customer\Address" />
+
+    <!-- Quote Qty -->
+    <preference for="Drc\Mobileapp\Api\Customer\WebApiQuoteQtyInterface" type="Drc\Mobileapp\Model\Customer\WebApiQuoteQty" />
+    
+    <!-- customer order -->
+    <preference for="Drc\Mobileapp\Api\Customer\WebApiOrderInterface" type="Drc\Mobileapp\Model\Customer\WebApiOrder"/>
+        
+    <!-- cart total -->    
+    <preference for="Magento\Quote\Model\Cart\CartTotalRepository" type="Drc\Mobileapp\Model\Cart\CartTotalRepository" />
+          
+    <!-- customer token -->      
+    <preference for="Drc\Mobileapp\Api\CustomerTokenServiceInterface" type="Drc\Mobileapp\Model\CustomerTokenService" />
+
+    <!-- customer update token -->
+    <preference for="Drc\Mobileapp\Api\UpdateTokenInterface" type="Drc\Mobileapp\Model\UpdateToken" />
+
+    <!-- Push Notification -->
+    <preference for="Drc\Mobileapp\Api\ListNotificationInterface" type="Drc\Mobileapp\Model\ListNotification" />
+    
+    <!-- Change currency  -->
+    <preference for="Drc\Mobileapp\Api\Currency\WebApiCurrencyInterface"
+                type="Drc\Mobileapp\Model\Currency\WebApiCurrency" />
+
+    <!-- Get All Brand -->
+    <preference for="Drc\Mobileapp\Api\Brand\WebApiBrandInterface"
+                type="Drc\Mobileapp\Model\Brand\WebApiBrand" />   
+
+    <!-- Social Login -->
+    <preference for="Drc\Mobileapp\Api\SocialLoginCustomerInterface" type="Drc\Mobileapp\Model\SocialLoginCustomer" />
+
+    <!-- Configurable Price -->
+    <!-- <type name="Magento\ConfigurableProduct\Model\Product\Type\Configurable\Price">
+        <plugin name="drc_mobileapp_plugin_product_type_configurable_price" type="Drc\Mobileapp\Plugin\Product\Type\Configurable\Price"/>
+    </type> -->
+
+     <!-- Mobile Login OTP -->
+    <preference for="Drc\Mobileapp\Api\WebApiMobileLoginOtpInterface"
+                type="Drc\Mobileapp\Model\MobileOtp\Mobileloginotp" />
+
+    <!-- Mobile Verify OTP -->
+    <preference for="Drc\Mobileapp\Api\WebApiMobileVerifyOtpInterface"
+                type="Drc\Mobileapp\Model\MobileOtp\VerifyOtp" />
+
+    <!-- Promo Banner -->
+    <preference for="Drc\Mobileapp\Api\PromoBanner\WebApiPromoaBannerInterface" type="Drc\Mobileapp\Model\PromoBanner\PromoBanner" />
+
+    <!-- Category Mobile Banner -->
+    <type name="Drc\Mobileapp\Controller\Adminhtml\Category\Image\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Magento\Catalog\CategoryImageUpload</argument>
+        </arguments>
+    </type>
+    <virtualType name="Magento\Catalog\CategoryImageUpload" type="Magento\Catalog\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">catalog/tmp/category</argument>
+            <argument name="basePath" xsi:type="string">catalog/category</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <preference for="Magento\Catalog\Model\Category\DataProvider" type="Drc\Mobileapp\Model\Category\DataProvider" />
+
+    <!-- Track Order Details -->
+    <preference for="Drc\Mobileapp\Api\TrackOrder\WebApiTrackOrderInterface"
+                type="Drc\Mobileapp\Model\TrackOrder\TrackOrderInfo" />
+
+    <preference for="Drc\Mobileapp\Api\WebApiIsMobileNumberVerified"
+                type="Drc\Mobileapp\Model\MobileOtp\IsMobileNumberVerified" />
+
+    <preference for="Drc\Mobileapp\Api\Loyalty\LoyaltyVoucher"
+                type="Drc\Mobileapp\Model\Loyalty\LoyaltyVoucher" />
+
+    <preference for="Drc\Mobileapp\Api\Loyalty\ApplyGiftcardAccount" type="Amasty\GiftCardAccount\Model\GiftCardAccount\GiftCardAccountManagement" />
+    
+    <preference for="Drc\Mobileapp\Api\Forceupdate\SystemconfigManagementInterface" type="Drc\Mobileapp\Model\ForceUpdate\SystemconfigManagement"/>
+</config>

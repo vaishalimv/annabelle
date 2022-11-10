@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">   
+    <event name="customer_save_after">
+        <observer name="fledge_mobile_otp_login_customer_register_success_rest_api" instance="Drc\Mobileapp\Observer\RegisterSuccess" />
+    </event>
+   <event name="customer_save_before">
+        <observer name="fledge_mobile_otp_login_customer_account_edit_rest_api" instance="Drc\Mobileapp\Observer\CustomerAccountEditSuccess" />
+    </event>
+</config>

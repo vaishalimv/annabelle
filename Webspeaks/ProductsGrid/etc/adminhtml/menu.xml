@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="Webspeaks_ProductsGrid::section" title="Home Screen Mobile App Product Section"  module="Webspeaks_ProductsGrid" sortOrder="100" parent="Magento_Catalog::catalog" resource="Webspeaks_ProductsGrid::section"/>
+        <add id="Webspeaks_ProductsGrid::productsgrid" title="Add Product Section" module="Webspeaks_ProductsGrid" sortOrder="100" parent="Webspeaks_ProductsGrid::section" resource="Webspeaks_ProductsGrid::productsgrid" action="wsproductsgrid/contacts"/>
+    </menu>
+</config>
